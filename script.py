@@ -20,11 +20,6 @@ for w in words:
     print(w)
     r.hincrby("words",w,1)
 
-# Affichage du compte final
-# print("Compte final des mots dans Redis:")
-# final_counts = r.hgetall("words")
-# for word, count in final_counts.items():
-#     print(f"{word.decode('utf-8')}: {int(count)}")
 
 # Récupération de toutes les clés (mots) stockées dans Redis
 all_words = r.hkeys("words")
